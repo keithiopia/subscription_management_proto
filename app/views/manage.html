@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Manage your subscriptions
+{% endblock %}
+
+{% block content %}
+
+{% set address = data.address | default('test@example.com') %}
+{% set subscriptions = data.subscriptions | default([]) %}
+{% set weekly_digest = data.weekly_digest | default('separately') %}
+
+<main id="content" role="main" class="manage">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Manage your subscriptions
+      </h1>
+
+      <script>
+        if (window.location.href.indexOf("saved") !== -1) {
+          document.write('<p class="saved-successfully">Your changes have been saved.</p>');
+        }
+      </script>
+
+      <h2 class="heading-large">Subscriptions for {{ address }}</h2>
+      <p style="margin-top: -1em; margin-bottom: 2em;"><a href="change-email-2">Change email address</a></p>
+
+      <ol class="subscriptions">
+        {% for subscription in subscriptions %}
+          {% set frequency = data[subscription.id + "-frequency"] | default('immediately') %}
+          <h3 class="heading-small">{{subscription.title}}</h3>
+          <li class="subscription panel" style="margin-top: 0; margin-bottom: 2em;" data-subscription="{{ subscription | dump }}" data-frequency="{{frequency}}">
+            {% if frequency == "immediately" %}
+              <p>You chose to get updates {{frequency}}.<br/>
+            {% else %}
+              <p>You chose to get {{frequency}} updates.<br/>
+            {% endif %}
+
+              <a href="/edit?id={{subscription.id}}" class="edit-subscription">Change how often you get updates</a></p>
+              <p><a href="/confirm-unsubscribe?id={{subscription.id}}" class="unsubscribe">Unsubscribe</a></p>
+
+          </li>
+        {% endfor %}
+      </ol>
+
+
+      <!-- <h2 class="heading-large">Account settings</h2>
+
+      <form method="get" action="/manage">
+        <input type="hidden" name="saved" value="true">
+
+				<div class="form-group">
+					<fieldset>
+						<legend>
+              <h2 class="heading-medium">Change your digest settings</h2>
+						</legend>
+						<div class="multiple-choice">
+							<input
+								id="weekly-separately"
+								type="radio"
+								name="weekly_digest"
+                {% if weekly_digest === "separately" %}
+                  checked="checked"
+                {% endif %}
+								value="separately">
+							<label for="weekly-separately">Separate emails (by topic)</label>
+						</div>
+						<div class="multiple-choice">
+							<input
+								id="weekly-combined"
+								type="radio"
+								name="weekly_digest"
+                {% if weekly_digest === "combined" %}
+                  checked="checked"
+                {% endif %}
+								value="combined">
+							<label for="weekly-combined">One combined email</label>
+						</div>
+					</fieldset>
+          <input type="submit" class="button done" value="Save settings"></input>
+				</div>
+			</form>
+
+      <form action="/manage">
+        <input type="hidden" name="saved" value="true">
+
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <h2 class="heading-medium">
+                Change your email address
+              </h2>
+            </legend>
+
+            <label class="form-label" for="contact-email">Email address</label>
+            <input class="form-control" type="text" id="address" name="address">
+          </fieldset>
+          <input class="button done" type="submit" value="Update email address">
+        </div>
+      </form> -->
+    </div>
+  </div>
+  <a class="back-to-home" href="/">Back to homepage</a>
+</main>
+
+{% endblock %}

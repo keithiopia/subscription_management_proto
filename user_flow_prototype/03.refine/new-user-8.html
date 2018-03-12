@@ -1,0 +1,240 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="lte-ie8" lang=""><![endif]--><!--[if gt IE 8]><!--><html lang=""><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <title>GOV.UK - The best place to find government services and information</title>
+
+    <!--[if gt IE 8]><!--><link href="../xx.assets/govuk-template.css" media="screen" rel="stylesheet"><!--<![endif]-->
+    <!--[if IE 6]><link href="/govuk_template/assets/stylesheets/govuk-template-ie6.css?0.22.3" media="screen" rel="stylesheet" /><![endif]-->
+    <!--[if IE 7]><link href="/govuk_template/assets/stylesheets/govuk-template-ie7.css?0.22.3" media="screen" rel="stylesheet" /><![endif]-->
+    <!--[if IE 8]><link href="/govuk_template/assets/stylesheets/govuk-template-ie8.css?0.22.3" media="screen" rel="stylesheet" /><![endif]-->
+    <link href="../xx.assets/govuk-template-print.css" media="print" rel="stylesheet">
+    <link href="../xx.assets/checkbox-tree.css" media="all" rel="stylesheet">
+
+    <!--[if IE 8]><link href="/govuk_template/assets/stylesheets/fonts-ie8.css?0.22.3" media="all" rel="stylesheet" /><![endif]-->
+    <!--[if gte IE 9]><!--><link href="../xx.assets/fonts.css" media="all" rel="stylesheet"><!--<![endif]-->
+    <!--[if lt IE 9]><script src="/govuk_template/assets/javascripts/ie.js?0.22.3"></script><![endif]-->
+
+    <link rel="shortcut icon" href="/govuk_template/assets/images/favicon.ico?0.22.3" type="image/x-icon">
+
+    <link rel="mask-icon" href="/govuk_template/assets/images/gov.uk_logotype_crown.svg?0.22.3" color="#0b0c0c">
+    <link rel="apple-touch-icon" sizes="180x180" href="/govuk_template/assets/images/apple-touch-icon-180x180.png?0.22.3">
+    <link rel="apple-touch-icon" sizes="167x167" href="/govuk_template/assets/images/apple-touch-icon-167x167.png?0.22.3">
+    <link rel="apple-touch-icon" sizes="152x152" href="/govuk_template/assets/images/apple-touch-icon-152x152.png?0.22.3">
+    <link rel="apple-touch-icon" href="/govuk_template/assets/images/apple-touch-icon.png?0.22.3">
+
+    <meta name="theme-color" content="#0b0c0c">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="/govuk_template/assets/images/opengraph-image.png?0.22.3">
+
+    <link href="../xx.assets/prototype.css" media="screen" rel="stylesheet">
+
+  </head>
+  <body class="js-enabled">
+   <script>
+      function getQueryVariable(variable){
+         try{
+            q = location.search.substring(1);
+            v = q.split("&");
+            for( var i = 0; i < v.length; i++ ){
+               p = v[i].split("=");
+               if( p[0] == variable ){
+                  if( p[1].indexOf('%20') != -1 ){
+                     n = [];
+                     for( var j = 0; j < p[1].split('%20').length; j++ ){
+                        n.push(p[1].split('%20')[j]);
+                     }
+                     str = "";
+                     for( var k = 0; k < n.length; k++ ){
+                        str += n[k] + ' ';
+                     }
+                     return str.trim();
+                  }
+                  else{
+                     return p[1];
+                  }
+               }
+            }
+         }
+         catch (e){
+            console.log(e);
+         }
+      }
+
+      var varTopic = getQueryVariable("topic");
+      var varTopicParent = getQueryVariable("topicparent");
+      var varVersion = getQueryVariable("version");
+      var varEmail = getQueryVariable("email");
+      var varFreq = getQueryVariable("freq");
+
+   </script>
+
+   <script src="../xx.assets/jquery-1.11.0.min.js">
+   <script src="../xx.assets/application.js">
+   <script src="../xx.assets/show-hide-content.js">
+   <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <div id="skiplink-container">
+      <div>
+        <a href="#content" class="skiplink"></a>
+      </div>
+    </div>
+
+    <div id="global-cookie-message">
+        <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+    </div>
+
+    <header role="banner" id="global-header" class="with-proposition">
+      <div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
+              <img src="../xx.assets/gov.uk_logotype_crown_invert_trans.png_0.22.3" width="36" height="32" alt=""> GOV.UK
+            </a>
+          </div>
+
+        </div>
+        <div class="header-proposition">
+          <div class="content">
+            <a href="/govuk_template/" id="proposition-name">Set up notifications</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="global-header-bar"></div>
+    <main>
+      <a onclick="window.history.back();" href="javascript:void(0)" style="display: inline-block; padding-top: 1rem;">◀ Back</a>
+
+      <h1>What would you like to subscribe to?</h1>
+      <div class="form-group">
+         <p><strong>Choose from the policy areas Department for Education sends updates about most often</strong></p>
+         <fieldset>
+           <div class="multiple-choice" data-target="immediately">
+             <input id="example-1" type="checkbox" name="checkbox-topic" checked>
+             <label for="example-1">4 Policy areas</label>
+           </div>
+         </fieldset>
+
+         <fieldset class="panel" style="margin-left: 1.1em; padding-left: 1.5em;">
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-01" type="checkbox" class="checkbox-child-policy-area" name="example-01" checked>
+             <label for="example-01">Children and young people</label>
+           </div>
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-02" type="checkbox" class="checkbox-child-policy-area" name="example-01" checked>
+             <label for="example-02">Further education and skills</label>
+           </div>
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-03" type="checkbox" class="checkbox-child-policy-area" name="example-01" checked>
+             <label for="example-03">Government efficiency, transparency and accountability</label>
+           </div>
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-04" type="checkbox" class="checkbox-child-policy-area" name="example-01" checked>
+             <label for="example-04">Schools</label>
+           </div>
+         </fieldset>
+
+
+         <p><strong>You can also choose from the other Department for Education policy areas</strong></p>
+           <fieldset class="checkbox-tree__inputs" id="checkbox-tree__inputs">
+             <details>
+               <summary id="serviceCategories-20-1-summary">
+                 <h3 class="categories-heading">A-M</h3>
+                 <span class="categories-summary">18 policy areas</span>
+               </summary>
+
+               <div class="panel categories">
+                 <fieldset class="question related-information" id="a-to-m">
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-0" id="id-0" value="Arts and culture">  <label class="checkbox" for="id-0">Arts and culture  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-1" id="id-1" value="Borders and immigration">  <label class="checkbox" for="id-1">Borders and immigration  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-2" id="id-2" value="Business and enterprise">  <label class="checkbox" for="id-2">Business and enterprise  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-3" id="id-3" value="Community and society">  <label class="checkbox" for="id-3">Community and society  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-4" id="id-4" value="Consumer rights and issues">  <label class="checkbox" for="id-4">Consumer rights and issues  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-5" id="id-5" value="Crime and policing">  <label class="checkbox" for="id-5">Crime and policing  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-6" id="id-6" value="Defence and armed forces">  <label class="checkbox" for="id-6">Defence and armed forces  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-7" id="id-7" value="Employment">  <label class="checkbox" for="id-7">Employment  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-8" id="id-8" value="Equality, rights and citizenship">  <label class="checkbox" for="id-8">Equality, rights and citizenship  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-9" id="id-9" value="Europe">  <label class="checkbox" for="id-9">Europe  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-10" id="id-10" value="Foreign affairs">  <label class="checkbox" for="id-10">Foreign affairs  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-11" id="id-11" value="Government spending">  <label class="checkbox" for="id-11">Government spending  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-12" id="id-12" value="Higher education">  <label class="checkbox" for="id-12">Higher education  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-13" id="id-13" value="Housing">  <label class="checkbox" for="id-13">Housing  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-14" id="id-14" value="International aid and development">  <label class="checkbox" for="id-14">International aid and development  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-15" id="id-15" value="Law and the justice system">  <label class="checkbox" for="id-15">Law and the justice system  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-16" id="id-16" value="Local government">  <label class="checkbox" for="id-16">Local government  </label></div>
+                   <div class="multiple-choice">  <input type="checkbox" name="a-to-m-17" id="id-17" value="Media and communications">  <label class="checkbox" for="id-17">Media and communications  </label></div>
+                 </fieldset>
+               </div>
+             </details>
+          </fieldset>
+          <fieldset class="checkbox-tree__inputs" id="checkbox-tree__inputs">
+            <details>
+              <summary id="serviceCategories-20-1-summary">
+                <h3 class="categories-heading">N-Z</h3>
+                <span class="categories-summary">13 policy areas</span>
+              </summary>
+
+              <div class="panel categories">
+                <fieldset class="question related-informaiton" id="n-to-z">
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-1" id="id-1" value="National Health Service">  <label class="checkbox" for="id-1">National Health Service  </label></div>
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-2" id="id-2" value="Northern Ireland">  <label class="checkbox" for="id-2">Northern Ireland  </label></div>
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-3" id="id-3" value="Pensions and ageing society">  <label class="checkbox" for="id-3">Pensions and ageing society  </label></div>
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-4" id="id-4" value="Public health">  <label class="checkbox" for="id-4">Public health  </label></div>
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-5" id="id-5" value="Public safety and emergencies">  <label class="checkbox" for="id-5">Public safety and emergencies  </label></div>
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-6" id="id-6" value="Science and innovation">  <label class="checkbox" for="id-6">Science and innovation  </label></div>
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-7" id="id-7" value="Scotland">  <label class="checkbox" for="id-7">Scotland  </label></div>
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-8" id="id-8" value="Social care">  <label class="checkbox" for="id-8">Social care  </label></div>
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-9" id="id-9" value="Sports and leisure">  <label class="checkbox" for="id-9">Sports and leisure  </label></div>
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-10" id="id-10" value="Trade and investment">  <label class="checkbox" for="id-10">Trade and investment  </label></div>
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-11" id="id-11" value="UK economy">  <label class="checkbox" for="id-11">UK economy  </label></div>
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-12" id="id-12" value="Wales">  <label class="checkbox" for="id-12">Wales  </label></div>
+                  <div class="multiple-choice">  <input type="checkbox" name="a-to-m-13" id="id-13" value="Welfare">  <label class="checkbox" for="id-13">Welfare  </label></div>
+                </fieldset>
+          </fieldset>
+      </div>
+
+      <script>
+
+          $(document).ready(function() {
+
+               $('input[name="checkbox-topic"]').click(function() {
+                 if ($(this).prop("checked")){
+                     $('input[class="checkbox-child-policy-area"]').prop("checked", true);
+                  } else {
+                     $('input[class="checkbox-child-policy-area"]').prop("checked", false);
+                  }
+               });
+
+               $('input[class="checkbox-child-policy-area"]').click(function() {
+                 if ($(this).prop("checked")){
+                     null;
+                  } else {
+                     $('input[name="checkbox-topic"]').prop("checked", false);
+                  }
+               });
+          });
+      </script>
+
+      <div class="form-group">
+        <button onclick="window.location.href='../02.frequency/new-user-8.html?version='+varVersion+'&topic='+varTopic" id="next" class="button">Next</button>
+    </div>
+    </main>
+
+    <footer class="group js-footer" id="footer" role="contentinfo">
+      <div class="footer-wrapper">
+        <div class="footer-meta">
+          <div class="footer-meta-inner">
+            <div class="open-government-licence">
+              <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
+                <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+            </div>
+          </div>
+          <div class="copyright">
+            <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="global-app-error" class="app-error hidden"></div>
+    <script src="../xx.assets/govuk-template.js_0.22.3"></script>
+    <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
+</body></html>

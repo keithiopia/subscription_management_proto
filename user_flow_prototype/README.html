@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style type="text/css">
+         * {
+            font-size: 20px;
+            line-height: 1.25;
+            font-family: -webkit-system-font, sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+         }
+         body {
+            background: #fafafa;
+         }
+         h1, h2, p, ul {
+            margin: 1em auto;
+            max-width: 25em;
+         }
+         ol {
+            display: flex;
+            margin: 0;
+            padding: 0;
+         }
+         ol li {
+            padding: 5px;
+            list-style: none;
+            width: 20%;
+         }
+         ol li img {
+            box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+         }
+         img {
+            width: 100%;
+            height: auto;
+         }
+         em {
+            font-style: normal;
+            color: #aaa;
+         }
+         strong {
+            font-weight: bold;
+         }
+         hr {
+            border: none;
+            border-top: 2px solid #ddd;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>GOV.UK Notification discovery and sign up prototypes</h1>
+      <p>First round of research is of the subscription discovery and sign up flow. Trying to give an idea of potential notification frequency for new and existing users, without requiring an login.</p>
+      <p>Prototype asks for email address. If you're an existing user, it will show you a total quantity of notifications for your account, but not the details of what the user is already subscribed to.</p>
+      <p>User flow:</p>
+      <p>
+        <embed src="xx.assets/GOV.UK%20notifications%20user-flow.pdf" alt="GOV.UK%20notifications%20user-flow" width="1030" height="500" type="application/pdf">
+      </p>
+      <h2>Lab round 3</h2>
+      <p><a href="00.content/new-user-4.html">new-user-4.html</a></p>
+      <h2>Lab round 2</h2>
+      <p><strong>Protoype journey</strong><br>
+         1. <a href="00.content/new-user-3.html">new-user-3.html</a> <br>as a new user, sign up to get a daily email for updates to education stuff within a huge topic (refine to only get education stuff) <a href="05.confirm/new-user-3.html">confirmation link from email</a><br>
+         <em>[user is now signed up to notifications]</em><br>
+         2. <a href="00.content/existing-user-3.html">existing-user-3.html</a> <br>as an existing user, sign up to get immediate updates to a tiny topic in addition to their existing subscriptions (no need to refine down) <a href="05.confirm/existing-user-3.html">confirmation link from email</a><br>
+         3. <a href="00.content/existing-user-4.html">existing-user-4.html</a> <br>as an existing user, sign up to get a daily email for updates to a large topic (refine down to only get GCSE content) <a href="05.confirm/existing-user-4.html">confirmation link from email</a></p>
+         <p><em>Main changes from round 1: content changes and moved link to the the topic refine page from the intro paragraph to the progressive disclosure panels</em></p>
+      <hr>
+      <h2>Lab round 1</h2>
+      <p><strong>Protoype journey 1</strong><br>
+         1. <a href="00.content/new-user-1.html">new-user-1.html</a> <br>as a new user, sign up to get immediate updates to a small topic (probably won't want to refine)<br>
+         <em>[user is now signed up to notifications]</em><br>
+         2. <a href="00.content/existing-user-1.html">existing-user-1.html</a> <br>as an existing user, sign up to get a daily email for updates to a large topic (refine down to only get GCSE content)</p>
+      <p><strong>Protoype journey 2</strong><br>
+         1. <a href="00.content/new-user-2.html">new-user-2.html</a> <br>as a new user, sign up to get a daily email for updates to education stuff within a huge topic (refine to only get education stuff)<br>
+         <em>[user is now signed up to notifications]</em><br>
+         2. <a href="00.content/existing-user-2.html">existing-user-2.html</a> <br>as an existing user, sign up to get immediate updates to a tiny topic in addition to their existing subscriptions (no need to refine down)</p>
+      <ol>
+         <li>
+            <img src="00.content/screengrab.png" alt="screengrab" width="3200" height="6308"></li>
+         <li>
+            <img src="01.ask-for-email/screengrab.png" alt="screengrab" width="3200" height="3400"></li>
+         <li>
+            <img src="02.frequency/screengrab.png" alt="screengrab" width="3200" height="3400"><img src="02.frequency/screengrab-open.png" alt="screengrab-open" width="2852" height="1702"></li>
+         <li>
+            <img src="03.refine/screengrab.png" alt="screengrab" width="3200" height="3400"></li>
+         <li>
+            <img src="04.email-sent/screengrab.png" alt="screengrab" width="3200" height="3400"></li>
+      </ol>
+   </body>
+</html>

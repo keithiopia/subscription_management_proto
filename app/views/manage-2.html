@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Manage your subscriptions
+{% endblock %}
+
+{% block content %}
+
+{% set daily_digest = data.daily_digest | default('separately') %}
+{% set weekly_digest = data.weekly_digest | default('separately') %}
+
+<main id="content" role="main" class="manage">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Manage your subscriptions
+      </h1>
+
+      <p>
+        If you get daily or weekly updates for multiple topics, they can be
+        sent separately or combined into a single email.
+      </p>
+
+			
+    </div>
+  </div>
+</main>
+
+{% endblock %}

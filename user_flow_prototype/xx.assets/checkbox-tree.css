@@ -1,0 +1,87 @@
+fieldset.checkbox-tree__inputs > legend, .checkbox-tree__inputs details legend {
+  position: absolute;
+  left: -9999em; }
+
+.checkbox-tree__counter .js-stick-at-top-when-scrolling p {
+  margin-bottom: 10px; }
+  @media (min-width: 641px) {
+    .checkbox-tree__counter .js-stick-at-top-when-scrolling p {
+      padding-top: 7px;
+      padding-bottom: 7px; } }
+
+@media (min-width: 641px) {
+  .column-two-thirds .checkbox-tree {
+    margin-right: -50%; } }
+.checkbox-tree__counter {
+  margin-top: -13px; }
+  .checkbox-tree__counter .js-stick-at-top-when-scrolling {
+    /* give the floating element some top-padding */
+    padding-top: 14px; }
+  .checkbox-tree__counter strong {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+    /* overriding the line heights in the bold style is finicky */
+    line-height: 0 !important; }
+    @media (min-width: 641px) {
+      .checkbox-tree__counter strong {
+        font-size: 24px;
+        line-height: 1.25; } }
+
+.checkbox-tree__inputs fieldset.related-information {
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-left: 15px;
+  padding-top: 0; }
+  .validation-wrapper .checkbox-tree__inputs fieldset.related-information {
+    border-left: solid 5px #bfc1c3; }
+  .checkbox-tree__inputs fieldset.related-information .last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 10px; }
+    @media (min-width: 641px) {
+      .checkbox-tree__inputs fieldset.related-information .last-of-type {
+        margin-bottom: 5px; } }
+.checkbox-tree__inputs details[open] + details {
+  margin-top: 20px; }
+  @media (min-width: 641px) {
+    .checkbox-tree__inputs details[open] + details {
+      margin-top: 30px; } }
+.checkbox-tree__inputs details {
+  position: relative;
+  display: block;
+  clear: both;
+  margin-top: 10px; }
+  .checkbox-tree__inputs details summary {
+    display: inline-block;
+    color: #005ea5;
+    cursor: pointer; }
+    .checkbox-tree__inputs details summary:hover {
+      color: #2b8cc4; }
+    .checkbox-tree__inputs details summary:focus {
+      outline: solid 3px #ffbf47; }
+  .checkbox-tree__inputs details .categories-heading {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    display: inline-block; }
+    @media (min-width: 641px) {
+      .checkbox-tree__inputs details .categories-heading {
+        font-size: 19px;
+        line-height: 1.3157894737; } }
+  .checkbox-tree__inputs details .categories-summary {
+    font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    display: block;
+    margin-left: 25px;
+    color: #6f777b; }
+    @media (min-width: 641px) {
+      .checkbox-tree__inputs details .categories-summary {
+        font-size: 19px;
+        line-height: 1.3157894737; } }

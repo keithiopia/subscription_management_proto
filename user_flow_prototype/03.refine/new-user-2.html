@@ -1,0 +1,453 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="lte-ie8" lang=""><![endif]--><!--[if gt IE 8]><!--><html lang=""><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <title>GOV.UK - The best place to find government services and information</title>
+
+    <!--[if gt IE 8]><!--><link href="../xx.assets/govuk-template.css" media="screen" rel="stylesheet"><!--<![endif]-->
+    <!--[if IE 6]><link href="/govuk_template/assets/stylesheets/govuk-template-ie6.css?0.22.3" media="screen" rel="stylesheet" /><![endif]-->
+    <!--[if IE 7]><link href="/govuk_template/assets/stylesheets/govuk-template-ie7.css?0.22.3" media="screen" rel="stylesheet" /><![endif]-->
+    <!--[if IE 8]><link href="/govuk_template/assets/stylesheets/govuk-template-ie8.css?0.22.3" media="screen" rel="stylesheet" /><![endif]-->
+    <link href="../xx.assets/govuk-template-print.css" media="print" rel="stylesheet">
+
+    <!--[if IE 8]><link href="/govuk_template/assets/stylesheets/fonts-ie8.css?0.22.3" media="all" rel="stylesheet" /><![endif]-->
+    <!--[if gte IE 9]><!--><link href="../xx.assets/fonts.css" media="all" rel="stylesheet"><!--<![endif]-->
+    <!--[if lt IE 9]><script src="/govuk_template/assets/javascripts/ie.js?0.22.3"></script><![endif]-->
+
+    <link rel="shortcut icon" href="/govuk_template/assets/images/favicon.ico?0.22.3" type="image/x-icon">
+
+    <link rel="mask-icon" href="/govuk_template/assets/images/gov.uk_logotype_crown.svg?0.22.3" color="#0b0c0c">
+    <link rel="apple-touch-icon" sizes="180x180" href="/govuk_template/assets/images/apple-touch-icon-180x180.png?0.22.3">
+    <link rel="apple-touch-icon" sizes="167x167" href="/govuk_template/assets/images/apple-touch-icon-167x167.png?0.22.3">
+    <link rel="apple-touch-icon" sizes="152x152" href="/govuk_template/assets/images/apple-touch-icon-152x152.png?0.22.3">
+    <link rel="apple-touch-icon" href="/govuk_template/assets/images/apple-touch-icon.png?0.22.3">
+
+    <meta name="theme-color" content="#0b0c0c">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="/govuk_template/assets/images/opengraph-image.png?0.22.3">
+
+    <link href="../xx.assets/prototype.css" media="screen" rel="stylesheet">
+
+  </head>
+
+
+  <body class="js-enabled">
+
+   <script>
+      function getQueryVariable(variable){
+         try{
+            q = location.search.substring(1);
+            v = q.split("&");
+            for( var i = 0; i < v.length; i++ ){
+               p = v[i].split("=");
+               if( p[0] == variable ){
+                  if( p[1].indexOf('%20') != -1 ){
+                     n = [];
+                     for( var j = 0; j < p[1].split('%20').length; j++ ){
+                        n.push(p[1].split('%20')[j]);
+                     }
+                     str = "";
+                     for( var k = 0; k < n.length; k++ ){
+                        str += n[k] + ' ';
+                     }
+                     return str.trim();
+                  }
+                  else{
+                     return p[1];
+                  }
+               }
+            }
+         }
+         catch (e){
+            console.log(e);
+         }
+      }
+
+      var varTopic = getQueryVariable("topic");
+      var varTopicParent = getQueryVariable("topicparent");
+      var varVersion = getQueryVariable("version");
+      var varEmail = getQueryVariable("email");
+
+   </script>
+
+   <script src="../xx.assets/jquery-1.11.0.min.js">
+   <script src="../xx.assets/application.js">
+   <script src="../xx.assets/show-hide-content.js">
+
+
+
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+
+
+    <div id="skiplink-container">
+      <div>
+        <a href="#content" class="skiplink"></a>
+      </div>
+    </div>
+
+    <div id="global-cookie-message">
+
+        <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+
+    </div>
+
+
+    <header role="banner" id="global-header" class="with-proposition">
+      <div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
+              <img src="../xx.assets/gov.uk_logotype_crown_invert_trans.png_0.22.3" width="36" height="32" alt=""> GOV.UK
+            </a>
+          </div>
+
+        </div>
+        <div class="header-proposition">
+  <div class="content">
+    <a href="/govuk_template/" id="proposition-name">Set up notifications</a>
+  </div>
+</div>
+      </div>
+    </header>
+
+
+
+
+    <div id="global-header-bar"></div>
+
+    <div class="govuk-breadcrumbs collapse-on-mobile" data-module="track-click">
+      <ol>
+
+        <li class="">
+            <a href="#">Home</a>
+        </li>
+
+        <li class="parent-breadcrumb">
+            <a href="#"><script>document.write(varTopicParent)</script></a>
+        </li>
+
+        <li class="">
+            <a href="#" onclick="window.location.href='../00.content/'+varVersion+'.html'"><script>document.write(varTopic)</script></a>
+        </li>
+      </ol>
+    </div>
+
+
+
+    <main>
+      <h1>Refine your selection</h1>
+      <div class="form-group">
+         <p><strong>You can subscribe to everything in this topic</strong></p>
+         <fieldset>
+           <div class="multiple-choice" data-target="immediately">
+             <input id="example-1" type="checkbox" name="checkbox-topic" checked>
+             <label for="example-1"><script>document.write(varTopic)</script></label>
+           </div>
+         </fieldset>
+
+         <fieldset class="panel">
+           <p class="form-block"><strong>or only get notifications for specific areas of it</strong></p>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-2" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-2">Arts and culture</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-3" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-3">Borders and immigration</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-4" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-4">Business and enterprise</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-5" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-5">Children and young people</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-6" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-6">Climate change</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-7" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-7">Community and society</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-8" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-8">Consumer rights and issues</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-9" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-9">Crime and policing</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-10" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-10">Defence and armed forces</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-11" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-11">Employment</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-12" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-12">Energy</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-13" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-13">Environment</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-14" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-14">Equality, rights and citizenship</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-15" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-15">Europe</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-16" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-16">Financial services</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-17" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-17">Food and farming</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-18" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-18">Foreign affairs</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-19" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-19">Further education and skills</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-20" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-20">Government efficiency, transparency and accountability</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-21" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-21">Government spending</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-22" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-22">Higher education</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-23" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-23">Housing</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-24" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-24">International aid and development</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-25" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-25">Law and the justice system</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-26" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-26">Local government</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-27" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-27">Media and communications</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-28" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-28">National Health Service</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-29" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-29">National security</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-30" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-30">Northern Ireland</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-31" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-31">Pensions and ageing society</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-32" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-32">Planning and building</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-33" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-33">Public health</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-34" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-34">Public safety and emergencies</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-35" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-35">Regulation reform</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-36" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-36">Rural and countryside</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-37" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-37">Schools</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-38" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-38">Science and innovation</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-39" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-39">Scotland</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-40" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-40">Social care</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-41" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-41">Sports and leisure</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-42" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-42">Tax and revenue</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-43" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-43">Trade and investment</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-44" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-44">Transport</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-45" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-45">UK economy</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-46" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-46">Wales</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-47" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-47">Welfare</label>
+           </div>
+
+           <div class="multiple-choice" data-target="daily">
+             <input id="example-48" type="checkbox" name="checkbox-child-topic" checked>
+             <label for="example-48">Wildlife and animal welfare</label>
+           </div>
+
+
+         </fieldset>
+      </div>
+
+      <script>
+
+          $(document).ready(function() {
+
+               $('input[name="checkbox-topic"]').click(function() {
+                 if ($(this).prop("checked")){
+                     $('input[name="checkbox-child-topic"]').prop("checked", true);
+                  } else {
+                     $('input[name="checkbox-child-topic"]').prop("checked", false);
+                  }
+               });
+
+               $('input[name="checkbox-child-topic"]').click(function() {
+                 if ($(this).prop("checked")){
+                     null;
+                  } else {
+                     $('input[name="checkbox-topic"]').prop("checked", false);
+                  }
+               });
+
+
+          });
+      </script>
+
+      <div class="form-group">
+         <button onclick="window.location.href='../02.frequency/'+varVersion+'.html?topic='+varTopic+'&topicparent='+varTopicParent+'&version='+varVersion+'&email='+varEmail+'&refined=true'" id="next" class="button">Next</button>
+      </div>
+    </main>
+
+    <footer class="group js-footer" id="footer" role="contentinfo">
+
+      <div class="footer-wrapper">
+
+
+        <div class="footer-meta">
+          <div class="footer-meta-inner">
+
+
+            <div class="open-government-licence">
+              <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
+
+                <p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+
+            </div>
+          </div>
+
+          <div class="copyright">
+            <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="global-app-error" class="app-error hidden"></div>
+
+    <script src="../xx.assets/govuk-template.js_0.22.3"></script>
+
+
+
+
+    <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
+
+
+</body></html>

@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Manage your subscriptions
+{% endblock %}
+
+{% block content %}
+
+{% set frequency = data[id + "-frequency"] | default('immediately') %}
+
+<main id="content" role="main" class="manage">
+  <a onclick="window.history.back();" href="javascript:void(0)" style="display: inline-block; padding-top: 1rem;">◀ Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {{ title }}
+      </h1>
+	    <!-- <p> You can change the contents of your subscription or how often you receive it </p>
+      <a href="{{ url }}&freq={{frequency}}" class="button">Change contents</a> -->
+
+			<form method="get" action="/manage">
+        <input type="hidden" name="saved" value="true">
+
+				<div class="form-group">
+					<fieldset>
+						<legend>
+							<h2 class="heading-medium">How often do you want to get updates?</h2>
+						</legend>
+						<div class="multiple-choice">
+							<input
+                id="immediately"
+                type="radio"
+                name="{{id}}-frequency"
+                {% if frequency === "immediately" %}
+                  checked="checked"
+                {% endif %}
+                value="immediately">
+							<label for="immediately">As soon as they happen</label>
+						</div>
+						<div class="multiple-choice">
+							<input
+                id="immediately"
+                type="radio"
+                name="{{id}}-frequency"
+                {% if frequency === "daily" %}
+                  checked="checked"
+                {% endif %}
+                value="daily">
+							<label for="daily">No more than once a day</label>
+						</div>
+						<div class="multiple-choice">
+							<input
+                id="immediately"
+                type="radio"
+                name="{{id}}-frequency"
+                {% if frequency === "weekly" %}
+                  checked="checked"
+                {% endif %}
+                value="weekly">
+							<label for="weekly">No more than once a week</label>
+						</div>
+					</fieldset>
+				</div>
+
+        <div class="form-group">
+          <button type="submit" class="button done">Done</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

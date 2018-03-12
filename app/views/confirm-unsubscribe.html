@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Manage your subscriptions
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="manage">
+  <a onclick="window.history.back();" href="javascript:void(0)" style="display: inline-block; padding-top: 1rem;">◀ Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Manage your subscriptions
+      </h1>
+
+      <p>You are unsubscribing from '{{ title }}'.</p>
+
+      <form action="/unsubscribe" class="subscription">
+        <input type="hidden" name="saved" value="true">
+        <input type="hidden" name="id" value="{{ id }}" />
+
+        <input type="submit" class="button done" value="Unsubscribe"></input>
+      </form>
+    </div>
+  </div>
+  <a class="back-to-home" href="/">Back to homepage</a>
+</main>
+
+{% endblock %}
