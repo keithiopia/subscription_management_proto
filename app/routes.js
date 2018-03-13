@@ -85,7 +85,6 @@ router.get('/manage-2', function (req, res) {
 
 router.get('/email-change-2', function (req, res) {
   setEmailAddress(req);
-
   res.redirect('/manage');
 });
 
