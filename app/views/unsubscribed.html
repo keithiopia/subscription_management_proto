@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Manage your subscriptions
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="manage">
+  <a onclick="window.history.back();" href="javascript:void(0)" style="display: inline-block; padding-top: 1rem;">◀ Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div class="govuk-box-highlight">
+        <h1 class="heading-xlarge">      
+        You have successfully unsubscribed
+        </h1>
+      </div>
+      <p>You have successfully unsubscribed from '{{ title }}'.</p>
+
+    </div>
+  </div>
+ <a href="/manage">Back to manage subscriptions</a>.
+</main>
+
+{% endblock %}
