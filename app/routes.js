@@ -107,7 +107,7 @@ router.get('/create', function (req, res) {
 
 router.get('/unsubscribe', function (req, res) {
   deleteSubscription(req);
-  res.redirect('/manage');
+  res.redirect('/unsubscribed');
 });
 
 module.exports = router;
